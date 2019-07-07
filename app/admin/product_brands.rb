@@ -2,10 +2,10 @@ ActiveAdmin.register ProductBrand do
  # Provide whitelist of the ProductBrand parameters
  permit_params :brand_name, :store_id
 
- index do
-   selectable_column
-   column "Store ID", :store_id
-   column :brand_name
-   actions
- end
+ # index do
+ #   selectable_column
+ #   column "Store ID", :store_id
+ #   column :brand_name
+ #   actions
+ # end
 end
