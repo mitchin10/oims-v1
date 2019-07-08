@@ -1,6 +1,6 @@
 ActiveAdmin.register Store do
   # Provide whitelist of the Store parameters
-  permit_params :store_name, :address, :city, :state, :zipcode, product_brands_attributes: [:id, :brand_name, :_destroy]
+  permit_params :store_name, :address, :city, :state, :zipcode, categorizations_attributes: [:id, :produc_brand_id, :categorization_id, :_destroy], product_brand_ids: []
 
   index do
     selectable_column
@@ -23,11 +23,6 @@ ActiveAdmin.register Store do
     end
     f.inputs 'Product Brands' do
       f.input :product_brands, label: "All brands"
-    end
-    f.inputs do
-      f.has_many :product_brands, heading: 'Edit Product Brands', allow_destroy: true, new_record: false do |a|
-        a.input :brand_name
-      end
     end
     f.actions
   end

@@ -1,5 +1,6 @@
 class Store < ApplicationRecord
-  has_many :product_brands, dependent: :destroy
+  has_many :categorizations
+  has_many :product_brands, :through => :categorizations
 
   validates_presence_of :store_name, :address, :city, :state, :zipcode
 
