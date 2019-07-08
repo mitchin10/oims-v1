@@ -13,6 +13,7 @@ ActiveAdmin.register Store do
   end
 
   form do |f|
+    f.semantic_errors *f.object.errors.keys
     f.inputs 'Store' do
       f.input :store_name
       f.input :address
