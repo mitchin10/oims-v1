@@ -1,6 +1,6 @@
 ActiveAdmin.register Store do
   # Provide whitelist of the Store parameters
-  permit_params :store_name, :address, :city, :state, :zipcode, categorizations_attributes: [:id, :produc_brand_id, :categorization_id, :_destroy], product_brand_ids: []
+  permit_params :store_name, :address, :city, :state, :zipcode
 
   index do
     selectable_column
@@ -12,6 +12,11 @@ ActiveAdmin.register Store do
     actions
   end
 
+  filter :store_name
+  filter :city
+  filter :state
+  filter :zipcode
+
   form do |f|
     f.semantic_errors *f.object.errors.keys
     f.inputs 'Store' do
@@ -20,9 +25,6 @@ ActiveAdmin.register Store do
       f.input :city
       f.input :state
       f.input :zipcode
-    end
-    f.inputs 'Product Brands' do
-      f.input :product_brands, label: "All brands"
     end
     f.actions
   end

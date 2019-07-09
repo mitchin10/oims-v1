@@ -1,6 +1,5 @@
 class ProductBrand < ApplicationRecord
-  has_many :categorizations
-  has_many :stores, :through => :categorizations
+  belongs_to :store
 
   validates_presence_of :brand_name
 
