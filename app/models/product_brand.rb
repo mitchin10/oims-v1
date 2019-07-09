@@ -1,4 +1,5 @@
 class ProductBrand < ApplicationRecord
+  has_many :product_items
   belongs_to :store
 
   validates_presence_of :brand_name
