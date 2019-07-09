@@ -6,7 +6,7 @@ ActiveAdmin.register ProductBrand do
    selectable_column
    column :brand_name
    column :store do |name|
-     name.store.store_name
+     link_to name.store.store_name, admin_store_path(name.store_id)
    end
    actions
  end
