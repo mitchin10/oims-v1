@@ -1,5 +1,5 @@
 class ProductBrand < ApplicationRecord
-  has_many :product_items
+  has_many :product_items, dependent: :destroy
   belongs_to :store
 
   validates_presence_of :brand_name
