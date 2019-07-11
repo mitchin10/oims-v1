@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   margin: 0;
+   padding: 0;
+   background-image: url("books-document-min.jpg");
+   background-color: #ccc;
+   background-position: center;
+ }
+
+ .container {
+   margin-left: 25%;
+   margin-right: 25%;
+   margin-top: 20%;
+   text-align: center;
+   h1 {
+     font-size: 5em;
+     a {
+       text-decoration: none;
+       color: #0b8f1d;
+     }
+   }
+ }
