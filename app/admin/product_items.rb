@@ -1,4 +1,5 @@
 ActiveAdmin.register ProductItem do
+  menu parent: "Stores"
 
   permit_params :item_name, :sku, :product_brand_id, :amount
 

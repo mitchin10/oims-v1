@@ -1,4 +1,5 @@
 ActiveAdmin.register ProductBrand do
+  menu parent: "Stores"
  # Provide whitelist of the ProductBrand parameters
  permit_params :brand_name, :store_id
 
