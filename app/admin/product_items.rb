@@ -6,7 +6,7 @@ ActiveAdmin.register ProductItem do
     selectable_column
     column :item_name
     column :amount
-    column :product_brand do |brand|
+    column :product_brand, sortable: 'product_items.product_brand_id' do |brand|
       link_to brand.product_brand.brand_name, admin_product_brand_path(brand.product_brand_id)
     end
     column :sku
