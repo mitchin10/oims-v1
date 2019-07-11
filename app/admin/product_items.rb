@@ -1,10 +1,11 @@
 ActiveAdmin.register ProductItem do
 
-  permit_params :item_name, :sku, :product_brand_id
+  permit_params :item_name, :sku, :product_brand_id, :amount
 
   index do
     selectable_column
     column :item_name
+    column :amount
     column :product_brand do |brand|
       link_to brand.product_brand.brand_name, admin_product_brand_path(brand.product_brand_id)
     end
